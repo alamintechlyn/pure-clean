@@ -14,12 +14,40 @@ function navToggle(){
     }
 }
 
-// slider 
+// category slider 
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 4, 
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
+    },
+    spaceBetween: 15,
+    loop: true,
+    breakpoints: {
+      992: {
+        slidesPerView: 4,
+      },
+      768: {
+        slidesPerView: 3,
+      },
+      576: {
+        slidesPerView: 1,
+      },
+      480: {
+        slidesPerView: 1,
+      },
+      0: {
+        slidesPerView: 1,
+      },
+    },
+  });
+
+// shop -cart slider 
+var swiper = new Swiper(".my-shop-card", {
+    slidesPerView: 4, 
+    navigation: {
+      nextEl: "#next-btn",
+      prevEl: "#prev-btn",
     },
     spaceBetween: 15,
     loop: true,

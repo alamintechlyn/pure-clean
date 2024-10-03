@@ -876,6 +876,25 @@
 
 
 /* shop-card css start */
+
+#next-btn{
+    margin-right: 20px;
+    cursor: pointer;
+}
+#prev-btn{
+    cursor: pointer;
+}
+
+.shop-card-Heading{
+    position: relative;
+}
+.arrow-slide-btn{
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: 74px;
+}
+
 .shop-card-section{
     padding-bottom: 121px;
 }
@@ -961,31 +980,6 @@
 .mainSwiper{
     position: relative;
 }
-.shop-cart-btn,
-.shop-cart-btn2{
-    width: 40.278px;
-    height: 40.278px;
-    color: #fff;
-    background: #2196D7;
-    border-radius: 50%;
-}
-.shop-cart-btn::after,
-.shop-cart-btn2::after{
-    font-size: 14px;
-  }
-
-  .shop-cart-btn, .swiper-rtl .shop-cart-btn {
-    left: var(--swiper-navigation-sides-offset, 10px);
-    right: 5rem;
-}
-  .shop-cart-btn2, .swiper-rtl .shop-cart-btn2 {
-    left: var(--swiper-navigation-sides-offset, 10px);
-    right: 18px;
-}
-
-.shop-cart-btn, .shop-cart-btn2 {
-    top: var(--swiper-navigation-top-offset, 5%);
-}
 
 
 
@@ -1028,7 +1022,10 @@
         text-align: center;
     }
     .shop-card-section{
-        padding-bottom: 80px;
+        padding-bottom: 0;
+    }
+    .arrow-slide-btn{
+        display: none;
     }
 }
 
@@ -1052,7 +1049,10 @@
         text-align: center;
     }
     .shop-card-section{
-        padding-bottom: 80px;
+        padding-bottom: 0;
+    }
+    .arrow-slide-btn{
+        display: none;
     }
 }
 
@@ -1076,7 +1076,10 @@
     }
 
     .shop-card-section{
-        padding-bottom: 80px;
+        padding-bottom: 0;
+    }
+    .arrow-slide-btn{
+        display: none;
     }
 }
 
@@ -1100,7 +1103,10 @@
     }
 
     .shop-card-section{
-        padding-bottom: 80px;
+        padding-bottom: 0;
+    }
+    .arrow-slide-btn{
+        display: none;
     }
 }
 /* shop-card css end */
@@ -1617,7 +1623,7 @@ max-width: 100%;
         top: 32%;
     }
     .testimonial-section{
-        padding: 80px 0;
+        padding: 0;
     }
 }
 
@@ -1633,7 +1639,7 @@ max-width: 100%;
         padding-top: 31px;
     }
     .testimonial-section{
-        padding: 80px 0;
+        padding: 0;
     }
 }
 
@@ -1658,7 +1664,7 @@ max-width: 100%;
         padding: 20px;
     }
     .testimonial-section{
-        padding: 80px 0;
+        padding: 0;
     }
 }
 
@@ -1683,7 +1689,7 @@ max-width: 100%;
         padding: 20px;
     }
     .testimonial-section{
-        padding: 80px 0;
+        padding: 0;
     }
 }
 /* testimonial css end */
@@ -1707,18 +1713,11 @@ max-width: 100%;
     font-family: 'Outfit';
     font-size: 14px;
     font-weight: 600;
-    display: flex;
-    justify-content: end;
-    padding-bottom: 29px;
+    padding-top: 22px;
 }
-.article-card h4{
-    color: #050808;
-    font-family: Outfit;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 700;
+.article-card .pf-category-Heading{
     max-width: 296px;
-    padding-bottom: 22px;
+    text-align: start;
 }
 .article-card a{
     color: #050808;
@@ -1726,13 +1725,16 @@ max-width: 100%;
     font-size: 15px;
     font-weight: 500;
     text-decoration-line: underline;
-    padding-bottom: 30px;
 }
 .article-card a img{
    width: 100%;
    max-width: 100%;
 }
 
+.article-card .pf-subHeading{
+    text-align: start;
+    padding-bottom: 20px;
+}
 
 .articleCol{
     margin-bottom: 30px;
@@ -2008,16 +2010,12 @@ max-width: 100%;
     }
 }
 
-
-
-
 /* Brand logo section css end */
-
 
 /* footer css start */
 .footer-section{
     padding-top: 120px;
-    background: url('/images/footerBanner.png');
+    background: url('../images/footerBanner.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -2058,6 +2056,7 @@ max-width: 100%;
     color: #1A1A1A;
     max-width: 390px;
     text-align: start;
+    margin: 0;
 }
 .footer1 a h5{
     color: #1A1A1A;
@@ -2146,7 +2145,12 @@ max-width: 100%;
     .footerBottomIcon{
         justify-content: start;
         padding-top: 20px;
+        display: flex;
+        justify-content: center;
     } 
+    .footerBottom h4{
+        text-align: center;
+    }
     .footerBottomRow::before{
        display: none;
     }
@@ -2173,8 +2177,12 @@ max-width: 100%;
     .footerBottomIcon{
         justify-content: start;
         padding-top: 20px;
+        display: flex;
+        justify-content: center;
     } 
-
+    .footerBottom h4{
+        text-align: center;
+    }
     .footerBottomRow::before{
         display: none;
      }
@@ -2200,8 +2208,12 @@ max-width: 100%;
     .footerBottomIcon{
         justify-content: start;
         padding-top: 20px;
+        display: flex;
+        justify-content: center;
+    } 
+    .footerBottom h4{
+        text-align: center;
     }
-    
     .footerBottomRow::before{
         display: none;
      }
@@ -2227,7 +2239,12 @@ max-width: 100%;
     .footerBottomIcon{
         justify-content: start;
         padding-top: 20px;
+        display: flex;
+        justify-content: center;
     } 
+    .footerBottom h4{
+        text-align: center;
+    }
 
     .footerBottomRow::before{
         display: none;
@@ -2254,7 +2271,12 @@ max-width: 100%;
     .footerBottomIcon{
         justify-content: start;
         padding-top: 20px;
+        display: flex;
+        justify-content: center;
     } 
+    .footerBottom h4{
+        text-align: center;
+    }
 
     .footerBottomRow::before{
         display: none;

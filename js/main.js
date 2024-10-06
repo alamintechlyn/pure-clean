@@ -153,3 +153,17 @@ var swiper2 = new Swiper(".myProductSwiper2", {
     swiper: swiper,
   },
 });
+
+
+// client review slider
+
+var swiper = new Swiper(".clientSlider", {
+  slidesPerView: 1, 
+  spaceBetween: 20,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  loop: true
+});

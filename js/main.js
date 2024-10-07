@@ -105,9 +105,9 @@ var swiper = new Swiper(".tesimonal-slider", {
 
 
 
-var accordianCards = document.getElementsByClassName('perfomance-card');
+var accordianCards = document.getElementsByClassName('perfomance_card');
 var showToggles = document.getElementsByClassName('performance-Bottom');
-var btnToggle = document.getElementsByClassName('performance-top');
+var btnToggle = document.getElementsByClassName('performance_top');
 
 for (let i = 0; i < accordianCards.length; i++) {
   accordianCards[i].addEventListener('click', function() {
@@ -166,4 +166,41 @@ var swiper = new Swiper(".clientSlider", {
   },
 
   loop: true
+});
+
+
+
+// accordian js
+
+document.querySelectorAll('.accordianHeading').forEach((heading, index) => {
+  const accordionContent = heading.nextElementSibling;
+  const icon = heading.querySelector('.toggle-icon');
+
+  if (index === 0) {
+      accordionContent.style.display = 'block';
+      icon.textContent = '-';
+  }
+
+  heading.addEventListener('click', function () {
+      if (accordionContent.style.display === 'block') {
+          accordionContent.style.display = 'none';
+          icon.textContent = '+';
+      } else {
+          accordionContent.style.display = 'block';
+          icon.textContent = '-';
+      }
+  });
+});
+
+
+// bundle card js
+document.querySelectorAll('.top_cheak').forEach(function(checkbox) {
+  checkbox.addEventListener('change', function() {
+      const bundleCard = this.closest('.bundle_card');
+      if (this.checked) {
+          bundleCard.classList.add('selected');
+      } else {
+          bundleCard.classList.remove('selected');
+      }
+  });
 });

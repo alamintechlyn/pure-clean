@@ -1579,6 +1579,9 @@ max-width: 100%;
     left: auto;
 }
 
+.testimonial-section .swiper-button-next, .swiper-button-prev{
+    top: var(--swiper-navigation-top-offset, 41%);
+} 
 
 /* ======> responsive */
 
@@ -2457,6 +2460,9 @@ max-width: 100%;
     font-weight: 600;
 }
 
+.bundle_card.selected {
+    background: #D7ECF8;
+}
 .mainBundle .bundle-heading{
     color: #050808;
     font-family: 'Outfit';
@@ -3009,8 +3015,18 @@ margin-left: 24px;
         padding-bottom: 29px;
         display: flex;
         justify-content: end;
+        padding-left: 6px;
     }
 
+
+    .clientReview_section .swiper-button-prev{
+        top: var(--swiper-navigation-top-offset, 50%);
+    }
+
+    .clientReview_section .clientBtnPrev {
+        right: var(--swiper-navigation-sides-offset, 1px);
+        left: auto;
+    }
     .customerRate{
         display: flex;
         align-items: center;
@@ -3057,7 +3073,82 @@ margin-left: 24px;
             border-radius: 50%;
             margin-top: -69px;}
 
+            .clientReviewCard .pf-subHeading{
+                text-align: end;
+            }
 
+
+
+            /* responsive===========> */
+
+            @media(min-width:992px) and (max-width:1199.98px){
+   
+            }
+            @media(min-width:768px) and (max-width:991.98px){
+                .clientReview_section .clientSlider{
+                    margin-top: 50px;
+                }
+                .clientSlider .swiper-slide img {
+                    width: 150px;
+                    height: 150px;
+                    max-width: 100%;
+                }
+                .clientReviewCard{
+                    width: 100%;
+                    max-width: 100%;
+                }
+                .clientReview_section .pf-subHeading{
+                    max-width: 100%;
+                }
+            }
+
+            @media (min-width: 576px) and (max-width: 767px) {
+                .clientReview_section .clientSlider{
+                    margin-top: 50px;
+                }
+                .clientSlider .swiper-slide img {
+                    width: 150px;
+                    height: 150px;
+                    max-width: 100%;
+                }
+                .clientReviewCard{
+                    width: 100%;
+                    max-width: 100%;
+                }
+                .clientReview_section .pf-subHeading{
+                    max-width: 100%;
+                }
+                .clientReview_section .pf-heading{
+                    font-size: 30px;
+                }
+                .clientReview_section {
+                    padding: 80px 0;
+                }
+            }
+
+            @media (max-width: 575.98px) {
+                .clientReview_section .clientSlider{
+                    margin-top: 50px;
+                }
+                .clientSlider .swiper-slide img {
+                    width: 150px;
+                    height: 150px;
+                    max-width: 100%;
+                }
+                .clientReviewCard{
+                    width: 100%;
+                    max-width: 100%;
+                }
+                .clientReview_section .pf-subHeading{
+                    max-width: 100%;
+                }
+                .clientReview_section .pf-heading{
+                    font-size: 30px;
+                }
+                .clientReview_section {
+                    padding: 80px 0;
+                }
+            }
 
 /* client Review css end */
 
@@ -3081,8 +3172,77 @@ margin-left: 24px;
 }
 
 .accordianHeading .pf-perform-text{
-    font-size: 22px;
     margin: 0;
-    padding-bottom: 9px;
+    padding-bottom: 12px;
+    color:#050808;
+    font-family: 'Outfit';
+    font-size: 22px;
+    font-weight: 500;
 }
+.openAccordian .pf-subHeading{
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 18px;
+}
+.faq_section{
+    padding-bottom: 160px;
+}
+.faq_section .col-lg-6{
+    margin-bottom: 27px;
+}
+
+
+.openAccordian {
+    display: none;
+}
+
+.accordianHeading {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.toggle-icon {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.main_accordian{
+    margin-bottom: 21px;
+}
+
+
+/* =============> responsive */
+
+
+
+@media (min-width: 576px) and (max-width: 767px) {
+    
+    .faq_section .pf-heading{
+        font-size: 30px;
+    }
+    .accordianHeading .pf-perform-text{
+        font-size: 20px;
+    }
+    .faq_section{
+      padding-bottom: 60px;
+    }
+    
+}
+
+
+@media (max-width: 575.98px) {
+    .faq_section .pf-heading{
+        font-size: 30px;
+    }
+    .accordianHeading .pf-perform-text{
+        font-size: 20px;
+    }
+    .faq_section{
+        padding-bottom: 60px;
+      }
+}
+
 /* faq section css end */

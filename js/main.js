@@ -194,13 +194,16 @@ document.querySelectorAll('.accordianHeading').forEach((heading, index) => {
 
 
 // bundle card js
-document.querySelectorAll('.top_cheak').forEach(function(checkbox) {
-  checkbox.addEventListener('change', function() {
-      const bundleCard = this.closest('.bundle_card');
-      if (this.checked) {
-          bundleCard.classList.add('selected');
-      } else {
-          bundleCard.classList.remove('selected');
-      }
+document.querySelectorAll('.bundle_card').forEach(function(card) {
+  card.addEventListener('click', function() {
+      document.querySelectorAll('.bundle_card').forEach(elm=> {
+        elm.classList.remove('selected');
+        if(elm !== this){
+          elm.querySelector('.top_cheak').checked = false;
+        }
+      });
+
+      card.classList.add('selected');
+      card.querySelector('.top_cheak').checked = true;
   });
 });
